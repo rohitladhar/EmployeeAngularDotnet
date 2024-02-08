@@ -29,13 +29,20 @@ namespace apis.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
-                    b.Property<string>("Name")
-                        .IsRequired()
+                    b.Property<int>("Age")
+                        .HasColumnType("integer");
+
+                    b.Property<string>("Email")
                         .HasColumnType("text");
 
-                    b.Property<string>("Title")
-                        .IsRequired()
+                    b.Property<string>("Name")
                         .HasColumnType("text");
+
+                    b.Property<string>("Phone")
+                        .HasColumnType("text");
+
+                    b.Property<int>("Salary")
+                        .HasColumnType("integer");
 
                     b.HasKey("Id");
 

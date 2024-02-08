@@ -105,3 +105,4 @@ C:\EmployeeAngularDotnet\apis\obj\Debug\net8.0\refint\apis.dll
 C:\EmployeeAngularDotnet\apis\obj\Debug\net8.0\apis.pdb
 C:\EmployeeAngularDotnet\apis\obj\Debug\net8.0\apis.genruntimeconfig.cache
 C:\EmployeeAngularDotnet\apis\obj\Debug\net8.0\ref\apis.dll
+C:\EmployeeAngularDotnet\apis\obj\Debug\net8.0\apis.sourcelink.json
