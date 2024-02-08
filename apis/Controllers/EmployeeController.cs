@@ -21,6 +21,31 @@ namespace apis.Controllers
             await _employeeRepository.AddEmployee(model);
             return Ok();
         }
+        [HttpGet]
+        public async Task<ActionResult> GetEmployeeList()
+        {
+            var employeeList = await _employeeRepository.GetAllEmployee();
+            return Ok(employeeList);
+        }
+        [HttpGet("{id}")]
+        public async Task<ActionResult> GetEmployeebyId([FromRoute] int id)
+        {
+            var employee = await _employeeRepository.GetEmployeeById(id);
+            return Ok(employee);
+        }
+        [HttpPut("{id}")]
+        public async Task<ActionResult> UpdateEmployee([FromRoute] int id, [FromBody] Employee model)
+        {
+            await _employeeRepository.UpdateEmployee(id, model);
+            return Ok();
+        }
+        [HttpDelete("{id}")]
+        public async Task<ActionResult> DeleteEmployee([FromRoute] int id)
+        {
+            await _employeeRepository.DeleteEMployeeById(id);
+            return Ok();
+        }
+        
     }
 
 }
