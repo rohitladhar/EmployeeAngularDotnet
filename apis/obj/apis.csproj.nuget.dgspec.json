@@ -10,11 +10,11 @@
         "projectUniqueName": "C:\\EmployeeAngularDotnet\\apis\\apis.csproj",
         "projectName": "apis",
         "projectPath": "C:\\EmployeeAngularDotnet\\apis\\apis.csproj",
-        "packagesPath": "C:\\Users\\ROHIT\\.nuget\\packages\\",
+        "packagesPath": "C:\\Users\\rohin\\.nuget\\packages\\",
         "outputPath": "C:\\EmployeeAngularDotnet\\apis\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\ROHIT\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\rohin\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"

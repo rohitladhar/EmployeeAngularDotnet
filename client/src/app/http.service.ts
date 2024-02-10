@@ -7,7 +7,7 @@ import { IEmployee } from '../interfaces/employee';
 })
 export class HttpService {
 
-  apiUrl = "https://localhost:7162"
+  apiUrl = "http://localhost:5062"
   http = inject(HttpClient)
   constructor() {}
   getAllEmployee(){
