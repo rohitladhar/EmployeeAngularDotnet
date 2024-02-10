@@ -1,8 +1,8 @@
 export interface IEmployee{
-    id?: Number;
-    name:String;
-    email:String;
-    phone:Number;
-    age:Number;
-    salary:Number;
+    id?: number;
+    name:string;
+    email:string;
+    phone:number;
+    age:number;
+    salary:number;
 }

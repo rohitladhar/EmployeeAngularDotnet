@@ -3,7 +3,7 @@ import { IEmployee } from '../../../interfaces/employee';
 import { HttpService } from '../../http.service';
 import {MatTableModule} from '@angular/material/table';
 import { MatButtonModule } from '@angular/material/button';
-import { RouterLink } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 @Component({
   selector: 'app-employee-list',
   standalone: true,
@@ -14,9 +14,18 @@ import { RouterLink } from '@angular/router';
 export class EmployeeListComponent {
   employeeList:IEmployee[]=[]
   httpService = inject(HttpService)
-  displayedColumns: string[] = ['id', 'name', 'email', 'age','phone','salary'];
+  router = inject(Router)
+  displayedColumns: string[] = ['id', 'name', 'email', 'age','phone','salary','action'];
   ngOnInit(){
     this.httpService.getAllEmployee().subscribe(result=>{
     this.employeeList = result;})
+  }
+  edit(id:number){
+    this.router.navigateByUrl("/employee/"+id)
+  }
+  delete(id:number){
+    this.httpService.deleteEmployee(id).subscribe(result=>{
+      this.employeeList = this.employeeList.filter(x=>x.id!=id);
+    })
   }
 }
